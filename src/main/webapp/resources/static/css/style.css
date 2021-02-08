@@ -1,0 +1,80 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    border-collapse: collapse;
+    border: 1px solid #A9A9A9;
+}
+
+th {
+    font-family: Calibri, Arial, sans-serif;
+    width: 150px;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    border: 1px solid #A9A9A9;
+    font-size: 1rem;
+    padding: 4px;
+}
+
+td {
+    font-family: Calibri, Arial, sans-serif;
+    width: 150px;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #A9A9A9;
+    padding: 4px;
+    height: 30px;
+    font-size: 0.8rem;
+}
+
+form .float {
+    width: 28%;
+    float: left;
+    padding-top: 15px;
+}
+
+form label {
+    display: block;
+    padding: 0 0 5px 2px;
+    color: #A9A9A9;
+}
+
+form input[type=text],
+form input[type=password] {
+    display: block;
+    width: 40%;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #A9A9A9;
+}
+
+form input[name=directorLastName] {
+    width: 200px;
+}
+
+form .button {
+    display: block;
+    float: right;
+    padding-top: 39px;
+}
+
+form input[type=submit] {
+    display: block;
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #34a5cf;
+    border-radius: 8px;
+    background: linear-gradient(#34a5cf, #2a8ac4);
+    color: #ffffff;
+}
+
+#searchForm {
+    width: 953px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resultTable {
+    margin-top: 75px;
+}

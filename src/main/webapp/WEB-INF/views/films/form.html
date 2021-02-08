@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link th:href="@{/resources/static/css/reset.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/resources/static/css/style.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="searchForm">
+    <form action="#" th:action="@{/films/search}" th:method="GET">
+        <p class="float">
+            <label for="directorLastName">Last Name</label>
+            <input type="text" id="directorLastName" name="directorLastName">
+        </p>
+
+        <p class="float">
+            <label for="yearFrom">Released from</label>
+            <input type="text" id="yearFrom" name="yearFrom">
+        </p>
+
+        <p class="float">
+            <label for="yearUntil">Released until</label>
+            <input type="text" id="yearUntil" name="yearUntil">
+        </p>
+
+        <p class="button">
+            <input type="submit" value="Search"/>
+        </p>
+    </form>
+</div>
+
+<br>
+
+<div id="resultTable">
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Birth Date</th>
+            <th>Film Name</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+        </tr>
+        <tr th:each="film : ${films}">
+            <td>
+                <div th:text="${film.getDirector().getFirsName()}"></div>
+            </td>
+            <td>
+                <div th:text="${film.getDirector().getLastName()}"></div>
+            </td>
+            <td>
+                <div th:text="${film.getDirector().getBirthDate()}"></div>
+            </td>
+            <td>
+                <div th:text="${film.getName()}"></div>
+            </td>
+            <td>
+                <div th:text="${film.getReleaseDate()}"></div>
+            </td>
+            <td>
+                <div th:text="${film.getGenre()}"></div>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
